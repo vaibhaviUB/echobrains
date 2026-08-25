@@ -1,0 +1,20 @@
+
+DAX Usage - 
+1. measures -- dynamic calculation based on filters
+2. calculated column -- row by row calculations
+3. calculated table -- create new table from existing data 
+
+power BI supports - 2 types of measures--
+1 implicit measures-- automatically created
+2. explicit measures-- user created using DAX 
+
+DAX operators--
+1 arithmetic operator
+2.relational operator
+3.logical operator
+4.concatination operator
+
+
+
+
+

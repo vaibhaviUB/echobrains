@@ -1,0 +1,152 @@
+logical operator
+-----------------
+
+AND- all conditions must be true
+OR - at least one condition must be true
+NOT - reverse a condition 
+
+
+AND --- any one false is false 
+
+syntax - select * from table-name where cond1 and cond2 
+
+1) write a q to display whose age is below or equals to 30 and working in finance dept.
+	
+2) waq to diaplay emp name and dept whose annual salary is greater than 5lakhs and joined after 2020	
+	select name, department from employee where (salary * 12) > 500000 and joining_date > '2019-12-31';
+	
+3) waq to display emp whose exp is greater than 3 and joined before 2026
+	 select * from employee where exp >= 3 and joining_date < '2026-01-01';
+
+
+OR--- any one true is true
+
+1) waqtd employee whos exp is below 4 years or sales dept 
+ 	select * from employee
+	where exp<4 or department ='sales';
+
+2)waq to d employess dept and age whos joined before 2023 or salary is more than 1000 per day
+	select department,age from employee
+	where joining_date <= '2023-01-01' or (Salary*12/365) > 1000;
+
+
+NOT --- reverse the given condition
+if given is true - returns false
+if given is false - returns true
+
+use NOT keyword before condition
+
+syntax -- select * from tablename where NOT condition
+
+1) waqtd emps wos salary is not greater than 60k
+	select * from employee where NOT salary > 60000 ;
+
+2) waqtd emp name and dept whos bonus not less than 5000
+	select name, department from employee where not bonus < 5000;
+
+QQQQ-- DIFF BTW =! & NOT
+	=! comparison operator
+	NOT logical operator
+
+
+
+
+BETWEEN OPERATOR
+----------------
+
+BETWEEN is an special operator used to filter  records where condition lies on specific range. we will use between after where
+syntax- select * from table where colname between start and end;
+
+
+1) waqtd emp whos salary is > 10k and < 35k but salary is not equal to 25000
+
+ 	select * from employee where salary >= 10000 and salary <= 35000 and salary != 25000;	(using and op)
+	
+	select * from employee where salary between 10000 and 35000; 	(using between)
+
+2) waqtd emp name and salary and joining date who joined in between 2020 and 2025
+
+	select name, salary, joining_date from employee where joining_date between '2020-01-01' and '2025-12-31';
+
+3) list the emp who not joined in 2025 and salary is > 35k and working in sales dept or location = Chennai 
+	
+	SELECT * FROM employee WHERE not joining_date between '2025-01-01' and '2025-12-31' AND salary > 35000 AND department = 'Sales' OR city = 'Chennai';
+	
+	SELECT * FROM employee WHERE not joining_date < '2025-01-01' or joining_date > '2025-12-31' AND salary > 35000 AND department = 'Sales' OR city = 'Chennai';
+
+4) filter emp whos salary not between 32000 to 45000
+
+	select * from employee where salary not between 32000 and 45000;
+
+
+
+IN OPERATOR 
+-------------
+used to replace multiple or operator usage 
+filters the records based on given list
+syntax - selct * from tablename where colname IN (val1, val2);
+
+
+1) filter the employee from the list (sanya karan)
+	 
+	select 8 from employee where name IN ('sanya','karan');
+
+2) waqtd emp names whos ages are (10,30,49, 32)
+
+	select name from employee where age IN (10,30,49,32);
+
+3) print the employees whos exp between 5 to 15 years and working in Chennai and bng location
+
+	select * from employee where exp between 5 and 15 and city IN ('Chennai', 'Banglore');
+
+
+PATTERN MATCHING - LIKE OPERATOR
+--------------------------------
+USED TO filter records based on the pattern matching 
+% -- for one or more character
+_ -- for exactly one character / single character
+
+syntax-- select * from tablename where colname like '_or%';
+
+ 
+1)filter employee whos name starts with character A 
+
+	select * from employee where name like 'a%';
+
+2)filter employee whos name have 4 character 
+
+	select * from employee where name like '____'; (use 4 underscore)
+
+3) waqtd emp who is having h in their name 
+
+	select * from employee where name like '%h%';
+
+4)  waqtd emp whos 3rd letter contains h 
+
+	select * from employee where name like '__h%';
+
+
+IS operator
+-------------
+used to filter records based on null values
+
+syntax = select * from tablename where colname IS null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

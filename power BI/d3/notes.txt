@@ -1,0 +1,4 @@
+DAX - data analysis expressions 
+It is the formula language behind power BI excel power point and analysis services. 
+it is used to build measures and calculated columns.
+operates on entire tables and columns not single cell.

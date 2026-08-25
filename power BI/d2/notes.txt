@@ -1,0 +1,15 @@
+DAY - 2
+
+1. csv file - comma separated values formatted file, light weight file, easy to exchange in all the environment.
+2. Data Cleaning: 
+	loading data
+	Identify headers
+	fix the datatype 
+	replace null values  with 0 if its numerical column
+	merging columns
+	duplicate the column and rename it
+	grouping the column 
+3. folder as data source:
+	we can add multiple files into a folder that can be used to get data for a power BI report.
+	Automatically newly added files updated files are recognized  by power BI desktop
+	Eg: in a hospital billing report - billing files from diff dept can be added as and when its required to generate reports

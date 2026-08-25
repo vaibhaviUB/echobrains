@@ -1,0 +1,58 @@
+html5 forms and controls
+-------------------------
+
+1). the <form> element 
+the form element is the container for controls tht collect and submit user input.
+
+<form action="URL" metho="post">
+	<button type="submit">register</button>
+</form>
+
+
+attributes
+----------
+ action- defines the destination for the submitted data
+ method- defines the http method
+ id- uniquely identifies the form element
+ autocomplete- controls browsers autofill behavior.
+
+
+
+TYPES OF CSS
+-------------
+1. Inline -- inline ecss is written directly inside an html element using the style attribute it afftects only that specific element.
+	ex -
+	<h1 style="color:red; text-align:center;">welcome</h1>
+
+2. internal -- internal css is written inside the <style> tag within the <head> section
+	it applies styles to a single html page.
+	ex-
+	<style>
+	h1{color:blue; text-align:center;}
+	p{font-size:16px;}
+	</style>
+
+3. external -- external css is written in a separate css file , it is linked to html using the <link> tag
+	ex -
+
+css selector 
+-------------
+1. element selector - selects all the html elements of the same type
+	syntax- element{property:value;}
+
+2. Class selector- selectsnelements using the class attribue can be reused multiple times 
+	syntax- .classname{property:value;}
+
+3. ID selector - selects unique element using id attribute, id must be uniuqe 
+
+4. group selector - applies same style to multiple elements 
+	syntax- element1, element2{property:value;}
+
+5. universal selector - selects all the element on the page 
+	*{property :val;}
+
+
+
+Inside head tags
+----------------
+linking libraries, title ,css style sheet, js code block, 

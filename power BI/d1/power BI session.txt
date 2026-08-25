@@ -1,0 +1,64 @@
+power BI session-
+
+1. what is business intelligence??
+BI is the process of collecting, transforming, analyzing and visualizing dT to help organization make better business decisions.
+
+power BI converts the data into -
+*charts
+*dashboard
+*KPIs
+*reports
+
+2. what is power BI?
+ It is a Microsoft's business intelligence tool used to :
+	connect data
+	clean & transform the data
+	build dashboards
+
+3. power BI components
+
+power BI desktop---
+*windows applications
+*used to create reports
+*power query
+*data modeling
+*DAX
+
+power BI service---
+*cloud based
+*published reports
+*share dashboard
+*schedule refresh
+*collaboration
+
+power bi mobile --- iOS, android, windows
+
+power bi gateway--- 
+*refresh on-premise data
+*connect local databases
+*secure data transfer
+
+
+4. other tools --
+	tableau
+	Qlik sense
+	looker
+	spot fire
+	Domo
+	SAP business objects
+	IBM Cognos
+5. 4 views while generating reports:
+
+report view- generate reports
+data model view- create relationships
+table view- view the data
+DAX query view- create measures
+
+
+
+
+
+
+	
+
+
