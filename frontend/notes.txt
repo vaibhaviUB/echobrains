@@ -56,3 +56,14 @@ css selector
 Inside head tags
 ----------------
 linking libraries, title ,css style sheet, js code block, 
+
+
+CSS - DISPLAY , POSITIONING AND FLEXBOX 
+----------------------------------------
+
+1) DISPLAY - it controls how an html element is rendered and how it participate in the layout.
+
+display : block;
+display :  none;
+display: inline;
+display:  flex;

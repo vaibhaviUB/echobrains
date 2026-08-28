@@ -133,15 +133,96 @@ used to filter records based on null values
 syntax = select * from tablename where colname IS null;
 
 
+ORDER BY 
+--------
+
+used to sort the result (asc or des)
+order by comes after where clause(if we use where in  query)
+order by will work on numeric, strings, dates
+we can sort the result with multiple cols
+asc= low to high
+desc= high to low
+
+syntx -  
+select colname from tablename order by colname  asc/desc;
+
+1) display emp based on salary asc
+ 
+	select * from employee order by salary asc;
+
+2) display emps based on salary higher to lower
+
+	select * from employee order by salary desc;
+
+3) display emp based on salary low to high , and exp
+
+	select * from employee order by salary,exp asc; (always preference is for 1st col)
+
+4) sort the name, annualsalary emps based on annual salary  high to low
+
+	select name,salary*12 as annual_Salary from employee order by desc;  (using alias name)
+
+	
+5)waqtd emp who is working in sales dept sort them based on their exp
+
+	select * from employee where department='Sales' order by exp;
+
+6) waqtd emps name, dept, exp, from employees whose total salary is greater than 4lakhs and sort them based on total salary ;
+
+	select name, department, exp from employee where ((salary + bonus)*12) > 400000 order by (salary+bonus);
 
 
+LIMIT
+-----
+to get limited rows irrespective of any condition
+used to select specific num of rows from the table
+
+1) select only 2 emp rows
+
+	select * from employee limit 2;
+
+2) display top paid employee from the table (only 1)
+
+	select * from employee order by salary desc limit 1;
 
 
+OFFSET
+------
+OFFSET tells SQL how many records to skip before returning the result.
+used in pagination
+
+1) display emp  who salary is second highest (2nd hightest paid emp)
+
+	select * from employee order by salary desc limit 1 offset 1;
+
+2) suppose if we have no of employee and we want to display only 3 emps in each page of frontend , so this is how we do it 
+	select * from employee order by salary desc limit 3 offset 0;
+	select * from employee order by salary desc limit 3 offset 3;
+	select * from employee order by salary desc limit 3 offset 6;
+	
+3) waqtd top paid emp in finance dep
+
+	 select * from employee where department='finance' order by salary desc limit 1;
+
+4) display the emp name , dept, and salary of emp whos salary is gtreater than 60000 arrange them from high to low salary and display only top 3 
+
+	select name,department, salary from employee where salary > 60000 order by salary desc limit 3; 
+
+DISTINCT 
+--------
+USED to select unique records from the table
+removes duplicate records
+
+after select before col
 
 
+1) display unique departments from the employee table 
 
+	select distinct department from employee; 
 
-
+2) display unique dept in descending order
+ 	
+	select distinct department from employee order by department desc;
 
 
 
